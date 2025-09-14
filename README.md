@@ -1,7 +1,7 @@
 # OIBSIP
 This repository contains a collection of three simple yet functional command-line applications written in Python. Each script is a self-contained tool designed to perform a specific task, demonstrating fundamental Python concepts such as user input, data handling, and external API integration.
 
-## 📁 Repository Contents
+## Repository Contents
 
 ### 1. BMI Calculator (`BMI_Calculator.py`)
 A simple script that calculates your Body Mass Index (BMI) and provides a health category based on World Health Organization (WHO) standards.
@@ -39,7 +39,7 @@ A command-line application that fetches and displays real-time weather data for 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Python 3.x** must be installed on your system.
