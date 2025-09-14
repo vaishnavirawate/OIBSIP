@@ -1,45 +1,111 @@
 # OIBSIP
 This repository contains a collection of three simple yet functional command-line applications written in Python. Each script is a self-contained tool designed to perform a specific task, demonstrating fundamental Python concepts such as user input, data handling, and external API integration.
 
-📁 Repository Contents
-The repository includes the following command-line utilities:
+## 📁 Repository Contents
 
-BMI Calculator (BMI_Calculator.py)
-A simple script that prompts the user for their weight (in kilograms) and height (in meters) to calculate their Body Mass Index (BMI). It then classifies the result into one of several health categories (Underweight, Normal weight, Overweight, or Obese).
+### 1. BMI Calculator (`BMI_Calculator.py`)
+A simple script that calculates your Body Mass Index (BMI) and provides a health category based on World Health Organization (WHO) standards.
 
-Password Generator (password_generator.py)
-This tool creates strong, random passwords based on user-defined criteria. Users can specify the desired password length and choose which character types to include: letters, numbers, and symbols.
+**Features:**
+- Prompts for weight (in kilograms) and height (in meters).
+- Calculates BMI and classifies it into:
+  - Underweight
+  - Normal weight
+  - Overweight
+  - Obese
 
-Weather App (weather_app.py)
-A command-line weather application that fetches real-time weather data for a user-specified location. It uses a weather API to display key information such as temperature, humidity, and current weather conditions.
+### 2. Password Generator (`password_generator.py`)
+A secure and customizable tool for generating strong, random passwords.
 
-🚀 How to Run the Scripts
-Each script can be run independently from your terminal.
+**Features:**
+- User-defined password length.
+- Option to include/exclude character types:
+  - Uppercase letters
+  - Lowercase letters
+  - Numbers
+  - Symbols
+- Uses cryptographically secure random number generation.
 
-Clone the repository:
-git clone <repository_url>
-cd <repository_folder>
+### 3. Weather App (`weather_app.py`)
+A command-line application that fetches and displays real-time weather data for any city worldwide.
 
-Run the script:
-python BMI_Calculator.py
-python password_generator.py
-python weather_app.py
+**Features:**
+- Fetches data from the OpenWeatherMap API.
+- Displays key information:
+  - Temperature (°C)
+  - "Feels like" temperature
+  - Humidity (%)
+  - Weather conditions (e.g., "Clear sky", "Scattered clouds")
 
-⚙️ Prerequisites
-Python: You need Python 3.x installed on your machine.
+---
 
-API Key: The Weather App also requires a free API key from a service like OpenWeatherMap. You must replace the placeholder "YOUR_API_KEY" in the weather_app.py file with your actual key to use the application.
-# 1. Clone the repo and install dependencies
-git clone https://github.com/vaishnavirawate/weather-cli.git
-cd weather-cli
-pip install -r requirements.txt
+## 🚀 Getting Started
 
-# 2. Get your free API key from https://home.openweathermap.org/api_keys
+### Prerequisites
+- **Python 3.x** must be installed on your system.
+- The Weather App requires a **free API key** from [OpenWeatherMap](https://home.openweathermap.org/api_keys).
 
-# 3. Set the key as an environment variable
-export WEATHER_API_KEY="your_actual_api_key_here" # Mac/Linux
-# set WEATHER_API_KEY="your_key_here" # Windows CMD
-# $env:WEATHER_API_KEY="your_key_here" # Windows PowerShell
+### Installation & Usage
 
-# 4. Run the app!
-python weather.py London
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/vaishnavirawate/weather-cli.git
+    cd weather-cli
+    ```
+
+2.  **Install the required Python dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Run the scripts**
+    Each utility runs independently. Navigate to the project directory and use one of the following commands:
+
+    ```bash
+    # Run the BMI Calculator
+    python BMI_Calculator.py
+
+    # Run the Password Generator
+    python password_generator.py
+
+    # Run the Weather App (requires setup below)
+    python weather_app.py London
+    ```
+
+### ⚙️ Weather App Setup (Required)
+
+The Weather App requires an API key for authentication. For security, **do not hardcode the key** into the script. Instead, set it as an environment variable:
+
+**On Linux/macOS (Terminal):**
+```bash
+export WEATHER_API_KEY="your_actual_api_key_here"
+```
+
+**On Windows (Command Prompt):**
+```cmd
+set WEATHER_API_KEY="your_key_here"
+```
+
+**On Windows (PowerShell):**
+```powershell
+$env:WEATHER_API_KEY="your_key_here"
+```
+
+> **Important:** This environment variable is only active in your current terminal session. You will need to set it again if you open a new terminal window.
+
+After setting the variable, you can run the app:
+```bash
+python weather_app.py "London"
+```
+
+---
+
+## 🔧 Technologies Used
+
+- **Python 3**
+- **argparse** module (for command-line arguments)
+- **requests** library (for API calls in the Weather App)
+- **secrets** module (for secure password generation)
+- **OpenWeatherMap API** (for weather data)
+
+This portfolio demonstrates skills in **user input handling, API integration, environment variable security, and building functional CLI tools.**
